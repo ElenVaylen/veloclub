@@ -29,5 +29,13 @@ module.exports = {
 			"%components%": path.resolve(__dirname, "src/blocks/components")
 		}
 	},
-
+	plugins: [
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+			jQuery: 'jquery',
+			jquery: 'jquery',
+			"window.jQuery": "jquery",
+			"window.jquery": "jquery"
+		}),
+	]
 };

@@ -2,7 +2,8 @@ include ../../components/section-title/section-title
 
 mixin reviews-item(img)
   .reviews__item.col-p
-    img(src=img, alt="")
+    a(href=img).reviews__item-link
+      img(src=img, alt="")
 
 section.reviews.section.section-not-bot
   ._container.container
