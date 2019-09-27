@@ -1,0 +1,21 @@
+include ../../components/section-title/section-title
+include ../../components/button/button
+
+.about.section
+  ._container.container
+    +section-title('В программе ', 'фестиваля')
+    ._wrap.flex.justify-content-between
+      ._content.col
+        ._content-text.text-style
+          ul.list-style1
+            li Гонки на толокарах «МАШИНКИН» для детей от 2 до 5 лет
+            li Заезды на самокатах среди детей от 4 до 10 лет
+            li Гонки на велосипедах среди детей от 5 до 14 лет 
+            li Велозаезды людей с ограниченными возможностями здоровья на любом виде колесного транспорта
+            li А так же  викторины, конкурсы и других активностей от организаторов и партнеров Фестиваля.
+          p <i>Детский фестиваль будет проходить на огороженной территории с соблюдением всех мер безопасности проведения массовых мероприятий.</i>
+        ._content-buts.flex
+          +button('Регистрация на фестиваль', 'a', 'btn-type1', 'http://velosport.chrono.zelbike.ru/')
+      ._img.col-auto
+        ._img-wrap.pattern
+          img(src="./img/about-img.jpg", alt="")

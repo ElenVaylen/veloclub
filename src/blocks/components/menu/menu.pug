@@ -1,0 +1,20 @@
+mixin menu-item(title)
+  .menu__item
+    a.menu__link(href="#")= title
+
+nav.menu
+  ._bar
+    ._bar-line
+    ._bar-line
+    ._bar-line
+  ._wrap
+    ._list.flex
+      ._close.close
+        .close-line
+        .close-line
+      +menu-item('О клубе')
+      +menu-item('Регистрация')
+      +menu-item('События')
+      +menu-item('Галерея')
+      +menu-item('Отзывы')
+      +menu-item('Контакты')

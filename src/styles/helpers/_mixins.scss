@@ -1,0 +1,78 @@
+@mixin container {
+  max-width: $container-width;
+  @media screen and (max-width:$laptop-xl) {
+    max-width: $container-width-xl;
+  }
+  @media screen and (max-width:$laptop-s){
+    max-width: $container-width-s;
+  }
+  @media screen and (max-width:$tablet){
+    max-width: $container-width-t;
+  }
+  @media screen and (max-width:$mobile-xl){
+    max-width: 100%;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  @media screen and (max-width:$mobile-s){
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+}
+@mixin row-p {
+  margin-left: -$col-width / 2;
+  margin-right: -$col-width / 2;
+  margin-bottom: -$col-width;
+  @media screen and (max-width:$laptop-s){
+    margin-left: -$col-width-s / 2;
+    margin-right: -$col-width-s / 2;
+    margin-bottom: -$col-width-s;
+  }
+  @media screen and (max-width:$mobile-xl){
+    margin-left: -$col-width-m / 2;
+    margin-right: -$col-width-m / 2;
+    margin-bottom: -$col-width-m;
+  }
+}
+@mixin col-p {
+  padding-left: $col-width / 2;
+  padding-right: $col-width / 2;
+  margin-bottom: $col-width;
+  @media screen and (max-width:$laptop-s){
+    padding-left: $col-width-s / 2;
+    padding-right: $col-width-s / 2;
+    margin-bottom: $col-width-s;
+  }
+  @media screen and (max-width:$mobile-xl){
+    padding-left: $col-width-m / 2;
+    padding-right: $col-width-m / 2;
+    margin-bottom: $col-width-m;
+  }
+}
+@mixin title-item {
+  font-size: 30px;
+  @media screen and (max-width:$laptop-xl) {
+    font-size: 28px;
+  }
+  @media screen and (max-width:$tablet) {
+    font-size: 24px;
+  }
+  @media screen and (max-width:$mobile-m) {
+    font-size: 20px;
+  }
+  @media screen and (max-width:$mobile-xs) {
+    font-size: 18px;
+  }
+}
+@mixin title-text {
+  font-size: 22px;
+  @media screen and (max-width:$laptop-xl) {
+    font-size: 18px;
+  }
+  @media screen and (max-width:$tablet) {
+    font-size: 16px;
+  }
+  @media screen and (max-width:$mobile-m) {
+    font-size: 14px;
+  }
+}

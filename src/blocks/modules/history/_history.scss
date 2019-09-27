@@ -1,0 +1,217 @@
+.history {
+  &__info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    &-text {
+      color: $color-white;
+      font-size: 34px;
+      font-weight: 700;
+      padding: 10px 65px 55px 55px;
+      position: relative;
+      max-width: 800px;  
+      @media screen and (max-width:$laptop-xl) {
+        font-size: 22px;
+        padding: 10px 35px 35px 35px;
+        max-width: 590px;
+      }
+      @media screen and (max-width:$laptop-s) {
+        font-size: 20px;
+        padding: 10px 30px 30px 30px;
+        max-width: 445px;
+      }
+      @media screen and (max-width:$tablet) {
+        font-size: 16px;
+        padding: 10px 25px 25px 25px;
+      }
+      @media screen and (max-width:$mobile-m) {
+        font-size: 14px;
+        padding: 8px 20px 20px 20px;
+        max-width: 300px;
+      }
+      @media screen and (max-width:$mobile-s) {
+        max-width: 270px;
+        font-size: 12px;
+        padding: 6px 15px 15px 15px;
+      }
+      &:after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        content: '';
+        background-color: $color-constrast;
+        bottom: 0;
+        width: 100vw;
+        z-index: -1;
+      }
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        background-color: $color-white;
+        height: 75%;
+        width: 4px;
+        @media screen and (max-width:$tablet) {
+          width: 2px;
+        }
+      }
+    }
+  }
+  &__slider {
+    margin-bottom: 80px;
+    @media screen and (max-width:$laptop-s) {
+      margin-bottom: 40px;
+    }
+    @media screen and (max-width:$tablet) {
+      margin-bottom: 20px;
+    }
+    @media screen and (max-width:$mobile-m) {
+      margin-bottom: 15px;
+    }
+  }
+  &__item {
+    &-content {
+      width: 45%;
+      padding-left: 40px;
+      padding-bottom: 100px;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      @media screen and (max-width:$tablet) {
+        width: 100%;
+        padding-left: 0px;
+        margin-top: 30px;
+      }
+      @media screen and (max-width:$mobile-xl) {
+        padding-bottom: 80px;
+      }
+      @media screen and (max-width:$mobile-m) {
+        margin-top: 20px;
+      }
+    }
+    &-img {
+      width: 55%;
+      @media screen and (max-width:$tablet) {
+        width: 100%;
+      }
+      img {
+        width: 100%;
+        display: block;
+      }
+    }
+    &-text {
+      font-size: 28px;
+      font-weight: 300;
+      @media screen and (max-width:$laptop-xl) {
+        font-size: 24px;
+      }
+      @media screen and (max-width:$laptop-s) {
+        font-size: 18px;
+      }
+      @media screen and (max-width:$mobile-xl) {
+        font-size: 16px;
+      }
+      @media screen and (max-width:$mobile-m) {
+        font-size: 14px;
+      }
+    }
+    &-title {
+      font-size: 36px;
+      color: $color-constrast;
+      text-align: center;
+      position: relative;
+      @media screen and (max-width:$laptop-xl) {
+        font-size: 30px;
+      }
+      @media screen and (max-width:$laptop-s) {
+        font-size: 22px;
+      }
+      @media screen and (max-width:$mobile-xl) {
+        font-size: 20px;
+      }
+      @media screen and (max-width:$mobile-m) {
+        font-size: 18px;
+      }
+      @media screen and (max-width:$mobile-s) {
+        font-size: 16px;
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 1px;
+        background: $color-constrast;
+      }
+    }
+  }
+  &__nav {
+    position: absolute;
+    bottom: 0;
+    left: 40px;
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    right: 0;
+    padding: 0 60px;
+    justify-content: center;
+    @media screen and (max-width:$laptop-s) {
+      padding: 0 40px;
+    }
+    @media screen and (max-width:$tablet) {
+      left: 0px;
+    }
+    @media screen and (max-width:$mobile-xl) {
+      height: 80px;
+    }
+    &-item {
+      position: absolute;
+      top: 50%;
+      cursor: pointer;
+      display: block;
+      transform: translateY(-50%);
+      width: 0px;
+      height: 0px;
+      border-top: 20px solid transparent;
+      border-bottom: 20px solid transparent;
+    }
+    &-prev {
+      left: 0;
+      border-right: 24px solid $color-constrast;
+    }
+    &-next {
+      right: 0;
+      border-left: 24px solid $color-constrast;
+    }
+  }
+  &__dots {
+    div {
+      outline: none;
+    }
+    &-item {
+      padding: 0 20px;
+      outline: none;
+      @media screen and (max-width:$laptop-xl) {
+        padding: 0 10px;
+      }
+      @media screen and (max-width:$tablet) {
+        padding: 0 5px;
+      }
+      img {
+        display: block;
+        border: 2px solid transparent;
+        cursor: pointer;
+        .slick-current & {
+          border-color: $color-constrast;
+        }
+      }
+    }
+  }
+}

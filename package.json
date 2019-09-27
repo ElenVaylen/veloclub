@@ -1,0 +1,64 @@
+{
+  "name": "veloclub",
+  "description": "veloclub",
+  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ElenVaylen/veloclub.git"
+  },
+  "license": "MIT",
+  "scripts": {
+    "dev": "gulp",
+    "build": "gulp prod --production"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/register": "^7.0.0",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.5",
+    "bem-tools-core": "github:bem-tools/bem-tools-core",
+    "bem-tools-create": "github:bem-tools/bem-tools-create",
+    "browser-sync": "^2.23.6",
+    "eslint": "^5.15.1",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^3.9.2",
+    "gulp-debug": "^3.2.0",
+    "gulp-favicons": "^2.2.7",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-plumber": "^1.2.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-pugbem": "^2.1.3",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.6.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-watch": "^5.0.0",
+    "gulp-webp": "^4.0.1",
+    "imagemin-giflossy": "^5.1.10",
+    "imagemin-jpeg-recompress": "^5.1.0",
+    "imagemin-mozjpeg": "^8.0.0",
+    "imagemin-pngquant": "^7.0.0",
+    "imagemin-webp": "^5.0.0",
+    "imagemin-zopfli": "^6.0.0",
+    "webpack": "^4.29.6",
+    "webpack-stream": "^5.2.1",
+    "yargs": "^12.0.5"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "gulp-data": "^1.3.1",
+    "jquery": "^3.4.1",
+    "slick-carousel": "^1.8.1"
+  },
+  "bugs": {
+    "url": "https://github.com/ElenVaylen/veloclub/issues"
+  },
+  "homepage": "https://github.com/ElenVaylen/veloclub#readme",
+  "version": "1.0.0",
+  "main": ".babelrc.js"
+}

@@ -1,0 +1,50 @@
+.about {
+  &__wrap {
+    @media screen and (max-width:$mobile-xl) {
+      flex-direction: column;
+    }
+  }
+  &__content {
+    padding-right: 55px;
+    @media screen and (max-width:$laptop-xl) {
+      padding-right: 40px;
+    }
+    @media screen and (max-width:$mobile-xl) {
+      padding-right: 0px;
+    }
+    &-text {
+      margin-bottom: 60px;
+      @media screen and (max-width:$laptop-xl) {
+        margin-bottom: 40px;
+      }
+      @media screen and (max-width:$mobile-s) {
+        margin-bottom: 20px;
+      }
+    }
+    &-buts {
+      .btn:nth-child(1) {
+        margin-right: 40px;
+        @media screen and (max-width:$laptop-xl) {
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+  &__img {
+    position: relative;
+    @media screen and (max-width:$mobile-xl) {
+      width: 250px;
+      margin: 25px 0 0 0;
+    }
+    img {
+      width: 470px;
+      display: block;
+      @media screen and (max-width:$laptop-xl) {
+        width: 350px;
+      }
+      @media screen and (max-width:$tablet) {
+        width: 250px;
+      }
+    }
+  }
+}

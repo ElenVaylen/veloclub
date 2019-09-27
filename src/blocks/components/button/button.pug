@@ -1,0 +1,10 @@
+mixin button(title, type, className, hrefVal='#')
+  if type == 'a'
+    a.btn(href=hrefVal class=className)
+      span
+        =title
+  else 
+    button.btn(class=className)
+      span
+        =title
+    

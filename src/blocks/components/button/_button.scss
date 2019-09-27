@@ -1,0 +1,108 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 300;
+  border: 2px solid $color-constrast;
+  height: 72px;
+  width: 450px;
+  border-radius: 45px;
+  background: $color-constrast;
+  font-size: 26px;
+  color: $color-white;
+  @media screen and (max-width:$laptop-xl) {
+    height: 48px;
+    width: 340px;
+    font-size: 21px;
+  }
+  @media screen and (max-width:$tablet) {
+    height: 40px;
+    width: 290px;
+    font-size: 18px;
+  }
+  @media screen and (max-width:$mobile-m) {
+    width: 260px;
+    font-size: 16px;
+  }
+  @media screen and (max-width:$mobile-xs) {
+    width: 240px;
+    font-size: 14px;
+    height: 35px;
+  }
+  &:hover {
+    color: $color-white; 
+    background: darken($color: $color-constrast, $amount: 20);
+    border-color: darken($color: $color-constrast, $amount: 20);
+  }
+  &:focus {
+    box-shadow: none;
+  }
+  &-inverse {
+    background: $color-white;
+    color: $color-constrast;
+    &:hover {
+      color: $color-constrast;
+    }
+  }
+  &-min.btn {
+    width: 200px;
+    font-size: 16px;
+    height: 40px;
+    @media screen and (max-width:$laptop-xl) {
+      width: 180px;
+      font-size: 14px;
+      height: 35px;
+    }
+    @media screen and (max-width:$tablet) {
+      width: 160px;
+      font-size: 14px;
+    }
+    @media screen and (max-width:$mobile-m) {
+      height: 32px;
+      width: 150px;
+    }
+  }
+}
+.btn-type1 {
+  position: relative;
+  padding-left: 76px;
+  justify-content: flex-start;
+  @media screen and (max-width:$laptop-xl) {
+    padding-left: 45px;
+  }
+  @media screen and (max-width:$tablet) {
+    padding-left: 40px;
+  }
+  @media screen and (max-width:$mobile-m) {
+    padding-left: 30px;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    width: 44px;
+    height: 44px;
+    border-radius: 100%;
+    background: $color-white;
+    transform: translateY(-50%);
+    @media screen and (max-width:$laptop-xl) {
+      width: 24px;
+      height: 24px;
+      left: 9px;
+    }
+    @media screen and (max-width:$tablet) {
+      width: 18px;
+      height: 18px;
+    }
+    @media screen and (max-width:$mobile-m) {
+      width: 10px;
+      height: 10px;
+    }
+  }
+  &.btn-inverse {
+    &:before {
+      background: $color-constrast; 
+    }
+  }
+}

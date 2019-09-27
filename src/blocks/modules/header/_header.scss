@@ -1,0 +1,78 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  .logo {
+    display: block;
+    @media screen and (max-width:$laptop-xl) {
+      width: 300px;
+    }
+    @media screen and (max-width:$laptop-s){
+      width: 250px;
+    }
+    @media screen and (max-width:$tablet) {
+      width: 230px;
+    }
+    @media screen and (max-width:$mobile-m) {
+      width: 175px;
+    }
+    @media screen and (max-width:$mobile-s) {
+      width: 160px;
+    }
+  }
+  &__top {
+    padding: 30px 0 50px 0;
+    @media screen and (max-width:$laptop-xl) {
+      padding: 25px;
+    }
+    @media screen and (max-width:$laptop-s){
+      padding: 20px 0;
+    }
+    @media screen and (max-width:$mobile-m) {
+      padding: 15px 0;
+    }
+    @media screen and (max-width:$mobile-xs) {
+      padding: 10px 0;
+    }
+  }
+  &__phone {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    display: none;
+    &-link {
+      font-size: 40px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      border-bottom: 1px solid $color-white;
+      color: $color-white;
+      display: block;
+      text-align: right;
+      @media screen and (max-width:$laptop-xl) {
+        font-size: 30px;
+      }
+      @media screen and (max-width:$laptop-s){
+        font-size: 26px;
+        margin-bottom: 10px;
+      }
+      &:hover {
+        color: $color-white;
+      }
+    }
+    &-text {
+      color: $color-white;
+      font-size: 25px;
+      font-weight: 300;
+      text-align: right;
+      @media screen and (max-width:$laptop-xl) {
+        font-size: 20px;
+      }
+      @media screen and (max-width:$laptop-s){
+        font-size: 18px;;
+      }
+    }
+  }
+}

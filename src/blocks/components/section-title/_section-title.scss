@@ -1,0 +1,77 @@
+.section-title {
+  color: $color-title-base;
+  font-size: 68px;
+  margin: 0 0 60px 0;
+  text-align: left;
+  font-weight: 300;
+  padding-left: 128px;
+  position: relative;
+  line-height: 1.2;
+  .section-blue & {
+    color: $color-white;
+  }
+  @media screen and (max-width:$laptop-xl) {
+    font-size: 50px;
+    margin: 0 0 40px 0;
+    padding-left: 80px;
+  }
+  @media screen and (max-width:$laptop-xs) {
+    font-size: 40px;
+    padding-left: 75px;
+  }
+  @media screen and (max-width:$tablet) {
+    font-size: 35px;
+    padding-left: 60px;
+    margin: 0 0 30px 0;
+  }
+  @media screen and (max-width:$mobile-m) {
+    font-size: 25px;
+    padding-left: 40px;
+    margin: 0 0 25px 0;
+  }
+  @media screen and (max-width:$mobile-s) {
+    font-size: 22px;
+    margin: 0 0 20px 0;
+  }
+  @media screen and (max-width:$mobile-xs) {
+    font-size: 20px;
+  }
+  b {
+    font-weight: 700;
+  }
+  &:before {
+    content: '';
+    width: 90px;
+    background: $color-constrast;
+    height: 8px;
+    position: absolute;
+    top: 39px;
+    left: 0px;
+    .section-blue & {
+      background: $color-white;
+    }
+    @media screen and (max-width:$laptop-xl) {
+      width: 54px;
+      height: 5px;
+      top: 28px;
+    }
+    @media screen and (max-width:$laptop-xs) {
+      width: 48px;
+      height: 4px;
+      top: 24px;
+    }
+    @media screen and (max-width:$tablet) {
+      width: 38px;
+      height: 2px;
+      top: 21px;
+    }
+    @media screen and (max-width:$mobile-m) {
+      width: 24px;
+      top: 15px;
+    }
+    @media screen and (max-width:$mobile-s) {
+      top: 12px;
+    }
+  }
+
+}

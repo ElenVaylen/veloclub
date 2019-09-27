@@ -1,0 +1,51 @@
+.place {
+  &__wrap {
+    position: relative;
+    height: 500px;
+    @media screen and (max-width:$laptop-xl) {
+      height: 360px;
+    }
+    @media screen and (max-width:$mobile-xl) {
+      height: auto;
+    }
+  }
+  &__col {
+    &:first-child {
+      width: 50%;
+      padding-right: 40px;
+      @media screen and (max-width:$mobile-xl) {
+        width: 100%;
+        padding-right: 0px;
+        margin-bottom: 25px;
+      }
+    }
+    &:nth-child(2) {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      bottom: 0;
+      width: 50vw;
+      @media screen and (max-width:$mobile-xl) {
+        width: 100%;
+        position: relative;
+        left: 0;
+        height: 250px;
+      }
+    }
+  }
+  iframe {
+    width: 100%;
+    height: 100%;
+    @media screen and (max-width:$mobile-xl) {
+      position: absolute;
+      top: 0;
+      left: -24px;
+      right: 0;
+      bottom: 0;
+      width: 100vw;
+    }
+    @media screen and (max-width:$mobile-s) {
+      left: -14px;
+    }
+  }
+}
