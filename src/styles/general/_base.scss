@@ -129,9 +129,11 @@ button:focus {
   }
   @media screen and (max-width:$mobile-m) {
     font-size: 16px;
+    font-weight: 300;
   }
   @media screen and (max-width:$mobile-s) {
     font-size: 14px;
+    font-weight: 400;
   }
   p {
     margin-bottom: 20px;
@@ -185,6 +187,65 @@ button:focus {
   }
 }
 
+.slider {
+  padding-left: 30px;
+  padding-right: 30px;
+  &-wrap {
+    position: relative;
+  }
+}
+.arrows {
+  &__item {
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    display: block;
+    transform: translateY(-50%);
+    width: 0px;
+    height: 0px;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+  }
+  &__prev {
+    left: 0;
+    border-right: 24px solid $color-constrast;
+  }
+  &__next {
+    right: 0;
+    border-left: 24px solid $color-constrast;
+  }
+}
+.slick {
+  &-arrow {
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    display: block;
+    transform: translateY(-50%);
+    width: 0px;
+    height: 0px;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    font-size: 0px;
+    background: transparent;
+    -webkit-appearance: none;
+    padding: 0;
+    box-shadow: none;
+    text-shadow: none;
+    border-left: 0;
+    border-right: 0;
+
+  }
+  &-prev {
+    left: 0;
+    border-right: 24px solid $color-constrast;
+  }
+  &-next {
+    right: 0;
+    border-left: 24px solid $color-constrast;
+  }
+}
+
 .flex {
   display: flex;
   flex-wrap: wrap;
@@ -200,6 +261,9 @@ button:focus {
 }
 .justify-content-between {
   justify-content: space-between;
+}
+.justify-content-end {
+  justify-content: flex-end;
 }
 .col-auto {
   -ms-flex: 0 0 auto;

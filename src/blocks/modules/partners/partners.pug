@@ -1,0 +1,20 @@
+include ../../components/section-title/section-title
+
+mixin partners-item(img)
+  .partners__slider-item
+    img(data-lazy=img, alt="")
+
+section.partners.section.section-not-bot
+  ._container.container
+    +section-title('Наши ', 'партнеры')
+    ._slider-wrap.slider-wrap
+      ._slider.slider
+        +partners-item('./img/parnter1.jpg')
+        +partners-item('./img/parnter2.jpg')
+        +partners-item('./img/parnter3.jpg')
+        +partners-item('./img/parnter4.jpg')
+        +partners-item('./img/parnter5.jpg')
+        +partners-item('./img/parnter6.jpg')
+        +partners-item('./img/parnter8.jpg')
+        +partners-item('./img/parnter7.jpg')
+      

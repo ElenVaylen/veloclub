@@ -1,0 +1,20 @@
+.partners {
+  &__slider {
+    div {
+      outline: none;
+    }
+    &-item {
+      padding: 0 20px;
+      outline: none;
+      @media screen and (max-width:$laptop-xl) {
+        padding: 0 10px;
+      }
+      @media screen and (max-width:$tablet) {
+        padding: 0 5px;
+      }
+      img {
+        display: block;
+      }
+    }
+  }
+}

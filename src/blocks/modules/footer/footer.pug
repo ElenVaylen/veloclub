@@ -1,1 +1,19 @@
+mixin social-item(className, link='#', blank='_blank')
+  a.social__item(href=link class=className target=blank)
+
+
 footer.footer
+  ._container.container
+    ._list.row-p.flex
+      ._col.col-p
+        p АВТОНОМНАЯ НЕКОММЕРЧЕСКАЯ ОРГАНИЗАЦИЯ "ЦЕНТР ОРГАНИЗАЦИИ СПОРТИВНО-МАССОВЫХ МЕРОПРИЯТИЙ "СПОРТ БУДУЩЕГО"
+        p ОГРН 1181690062014
+        p 
+          a(href='mailto:acvs.rt@gmail.com') acvs.rt@gmail.com
+      ._col.col-p
+        .social
+          .social__list.flex.align-items-center.justify-content-end
+           +social-item('icon-vk social__item-vk', 'https://vk.com/acvsport_rt')
+           +social-item('icon-instagram2 social__item-inst', 'https://instagram.com/veliktime?igshid=jsulv85j1h22')
+
+

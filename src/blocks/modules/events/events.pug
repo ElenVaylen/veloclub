@@ -4,31 +4,32 @@ include ../../components/button/button
 mixin event-titles-item(title, num)
   h3.events__titles-item(data-title=num)= title
 
-mixin event()
+mixin event(title, text, date, link, target, img)
   .events__content-event
     .events__content-event__wrap.flex
-      .events__content-event__img(style="background-image: url('../img/marafon2.jpg');")
+      .events__content-event__img(style=`background-image: url(${img});`)
         a(href="#")
       .events__content-event__main
         h4.events__content-event__title
-          a(href="#") Название события
-        p.events__content-event__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+          a(href="#")= title
+        p.events__content-event__text= text
         .events__content-event__bot.flex.justify-content-between.align-items-center 
-          +button('Регистрация', '', 'btn-min')
+          +button('Регистрация', 'a', 'btn-min', link, target)
           .events__content-event__date
-            b 15 ноября
+            b= date
             | , Казань
 
-mixin event-content-item(num)
+mixin event-content-item(num, img1, img2)
   .events__content-item(class="events__content-item" + num)
     .events__content-list.flex.row-p
       .events__content-col.col-p
-        .events__content-col__img(style="background-image: url('../img/marafon.jpg');")
-        .events__content-col__img(style="background-image: url('../img/marafon.jpg');")
+        .events__content-col__img(style=`background-image: url(${img1});`)
+        .events__content-col__img(style=`background-image: url(${img2});`)
       .events__content-col.col-p.events-slider
-        +event()
-        +event()
-        +event()
+        if(num == '1')
+          +event('Премьера детского формата активного досуга для детей', 'Фестиваль велоактивностей: новый проект для самых маленьких от 2 до 5 лет - Гонки на толокарах "МАШИНКИН" и Гонки на велосипедах для детей от 6 до 14 лет - приняло участие 25 малышей до 5 лет и 50 детей в возрасте 6-14 лет.', '11 августа 2020 г.', 'https://vk.com/tolokar_velo', '_blank', './img/event1.jpg')
+          +event('"Велосипед - это здорово!"', 'Реализация Президентского Гранта Детский спортивный фестиваль "Велосипед - это здорово!" - в мероприятии приняло участие 250 детей от 2 до 14 лет. В том числе дети из 36 многодетных семей, а также дети с ОВЗ. Рекорд фестиваля: 2 многоденые семьи получили в качестве приза по Пять!!! киллограммов отличного мороженного от нашего партнера. Всего в фестивале приняло участие более 1000 человек.', '15 сентября 2019 г.', 'https://vk.com/velik_klass', '_blank', './img/event2.jpg')
+          +event('«Пестречинский осенний веломарафон»', 'Соревнования по велоспорту-маунтинбайку «Пестречинский осенний веломарафон» (дисциплина кросс-кантри марафон: ХСМ)', '27 октября 2019 г.', 'https://vk.com/event144054008', '_blank', './img/event3.jpg')
         
 
 section.events.section.section-not-bot
@@ -39,6 +40,6 @@ section.events.section.section-not-bot
       +event-titles-item('Мероприятия для детей', '2')
       +event-titles-item('Велотуры', '3')
     ._content
-      +event-content-item('1')
-      +event-content-item('2')
-      +event-content-item('3')
+      +event-content-item('1', './img/marafon-big4.jpg', './img/marafon-big5.jpg')
+      +event-content-item('2', './img/marafon-big1.jpg', './img/marafon-big2.jpg')
+      +event-content-item('3', './img/marafon-big3.jpg', './img/marafon-big6.jpg')

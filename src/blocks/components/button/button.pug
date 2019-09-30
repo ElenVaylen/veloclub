@@ -1,6 +1,6 @@
-mixin button(title, type, className, hrefVal='#')
+mixin button(title, type, className, hrefVal='#', target='')
   if type == 'a'
-    a.btn(href=hrefVal class=className)
+    a.btn(href=hrefVal class=className target=target)
       span
         =title
   else 

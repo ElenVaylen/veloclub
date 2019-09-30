@@ -30,11 +30,13 @@
         font-size: 20px;
       }
       @media screen and (max-width:$mobile-m) {
-        font-size: 18px;
         margin-bottom: 5px;
         &:last-child {
           margin-bottom: 0;
         }
+      }
+      @media screen and (max-width:$mobile-xs) {
+        font-size: 18px;
       }
       &:after {
         content: '';
@@ -183,6 +185,7 @@
       &__title {
         font-size: 26px;
         margin-bottom: 15px;
+        line-height: 1.15;
         @media screen and (max-width:$laptop-xl) {
           font-size: 24px;
           margin-bottom: 12px;
@@ -191,7 +194,7 @@
           font-size: 20px;
         }
         @media screen and (max-width:$mobile-xl) {
-          font-size: 18px;
+          font-size: 19px;
           margin-bottom: 10px;
         }
         @media screen and (max-width:$mobile-m) {
@@ -219,12 +222,12 @@
         } 
       }
       &__bot {
-        @media screen and (max-width:$mobile-m) {
+        @media screen and (max-width:$laptop-xl) {
           flex-direction: column;
           align-items: flex-start;
         }
         .btn {
-          @media screen and (max-width:$mobile-m) {
+          @media screen and (max-width:$laptop-xl) {
             margin-top: 10px;
             order: 2;
           } 

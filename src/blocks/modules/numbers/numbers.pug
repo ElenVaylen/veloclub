@@ -1,6 +1,33 @@
 include ../../components/section-title/section-title
 
+mixin numbers-photo(img)
+  .numbers__item.col-p
+    a.numbers__item-link(href=img)
+      img(src=img)
+
+mixin numbers-text(num, text)
+  .numbers__content-item
+    p.numbers__num= num
+    p.numbers__text= text
+
 section.numbers.section.section-not-bot
   ._container.container
     +section-title('Как это ', 'было')
-    ._list.flex
+    ._wrap
+      ._list.flex.row-p
+        +numbers-photo('./img/numbers1.jpg')
+        +numbers-photo('./img/numbers2.jpg')
+        +numbers-photo('./img/numbers3.jpg')
+        +numbers-photo('./img/numbers4.jpg')
+        +numbers-photo('./img/numbers5.jpg')
+        +numbers-photo('./img/numbers6.jpg')
+        +numbers-photo('./img/numbers7.jpg')
+        +numbers-photo('./img/numbers8.jpg')
+        .numbers__item.col-p
+          img(src='./img/numbers-last.png')
+      ._content
+        h4._title VelikTime в цифрах:
+        ._content-list
+          +numbers-text('5 895', 'участников побывало на наших мероприятиях')
+          +numbers-text('15', 'городов, где мы организовывали вело-мероприятия')
+          +numbers-text('5 895', 'участников побывало на наших мероприятиях')

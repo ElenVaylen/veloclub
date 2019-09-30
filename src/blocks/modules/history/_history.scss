@@ -5,6 +5,10 @@
     left: 0;
     right: 0;
     z-index: 1;
+    @media screen and (max-width:$mobile-xl) {
+      position: relative;
+      margin-top: -20px;
+    }
     &-text {
       color: $color-white;
       font-size: 34px;
@@ -26,15 +30,14 @@
         font-size: 16px;
         padding: 10px 25px 25px 25px;
       }
-      @media screen and (max-width:$mobile-m) {
-        font-size: 14px;
-        padding: 8px 20px 20px 20px;
-        max-width: 300px;
+      @media screen and (max-width:$mobile-xl) {
+        padding: 10px 20px;
+        max-width: 100%;
+        margin-bottom: 25px;
       }
       @media screen and (max-width:$mobile-s) {
-        max-width: 270px;
-        font-size: 12px;
-        padding: 6px 15px 15px 15px;
+        font-size: 14px;
+        margin-bottom: 20px;
       }
       &:after {
         position: absolute;
@@ -60,16 +63,25 @@
       }
     }
   }
-  &__slider {
-    margin-bottom: 80px;
+  .arrows {
+    padding: 0 60px;
+    position: absolute;
+    bottom: 0;
+    left: 40px;
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    right: 0;
+    justify-content: center;
     @media screen and (max-width:$laptop-s) {
-      margin-bottom: 40px;
+      padding: 0 40px;
     }
     @media screen and (max-width:$tablet) {
-      margin-bottom: 20px;
+      left: 0px;
     }
-    @media screen and (max-width:$mobile-m) {
-      margin-bottom: 15px;
+    @media screen and (max-width:$mobile-xl) {
+      height: 80px;
     }
   }
   &__item {
@@ -119,6 +131,9 @@
       @media screen and (max-width:$mobile-m) {
         font-size: 14px;
       }
+      @media screen and (max-width:$mobile-s) {
+        font-weight: 400;
+      }
     }
     &-title {
       font-size: 36px;
@@ -148,69 +163,6 @@
         bottom: 0;
         height: 1px;
         background: $color-constrast;
-      }
-    }
-  }
-  &__nav {
-    position: absolute;
-    bottom: 0;
-    left: 40px;
-    height: 100px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    right: 0;
-    padding: 0 60px;
-    justify-content: center;
-    @media screen and (max-width:$laptop-s) {
-      padding: 0 40px;
-    }
-    @media screen and (max-width:$tablet) {
-      left: 0px;
-    }
-    @media screen and (max-width:$mobile-xl) {
-      height: 80px;
-    }
-    &-item {
-      position: absolute;
-      top: 50%;
-      cursor: pointer;
-      display: block;
-      transform: translateY(-50%);
-      width: 0px;
-      height: 0px;
-      border-top: 20px solid transparent;
-      border-bottom: 20px solid transparent;
-    }
-    &-prev {
-      left: 0;
-      border-right: 24px solid $color-constrast;
-    }
-    &-next {
-      right: 0;
-      border-left: 24px solid $color-constrast;
-    }
-  }
-  &__dots {
-    div {
-      outline: none;
-    }
-    &-item {
-      padding: 0 20px;
-      outline: none;
-      @media screen and (max-width:$laptop-xl) {
-        padding: 0 10px;
-      }
-      @media screen and (max-width:$tablet) {
-        padding: 0 5px;
-      }
-      img {
-        display: block;
-        border: 2px solid transparent;
-        cursor: pointer;
-        .slick-current & {
-          border-color: $color-constrast;
-        }
       }
     }
   }

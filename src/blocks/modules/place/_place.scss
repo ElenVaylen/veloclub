@@ -13,6 +13,9 @@
     &:first-child {
       width: 50%;
       padding-right: 40px;
+      @media screen and (max-width:$laptop-s){
+        padding-right: 20px;
+      }
       @media screen and (max-width:$mobile-xl) {
         width: 100%;
         padding-right: 0px;

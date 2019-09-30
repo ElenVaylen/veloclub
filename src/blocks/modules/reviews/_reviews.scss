@@ -1,6 +1,9 @@
 .reviews {
   &__item {
     width: 50%;
+    @media screen and (max-width:$mobile-s) {
+      width: 100%;
+    }
     img {
       display: block;
     }

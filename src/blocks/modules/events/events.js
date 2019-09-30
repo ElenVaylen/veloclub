@@ -58,3 +58,8 @@ $(document).ready(function(){
   });
   
 });
+
+$(window).resize(function() {
+  let titleActive = $('.events__titles-item.active');
+  switchSlider(titleActive);
+});
